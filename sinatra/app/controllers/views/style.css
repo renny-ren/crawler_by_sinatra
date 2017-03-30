@@ -1,0 +1,16 @@
+h1{
+	text-align: center;
+	color: red;
+}
+
+.films{
+	clear:left;
+}
+
+#films{
+	clear:left;
+}
+
+form{
+	float:left;
+}

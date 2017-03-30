@@ -1,0 +1,14 @@
+<h1>Crawler</h1>
+<h3>Please log in or sign up to continue.</h3>
+<%= flash[:error] %>
+
+<form action="/login" method="post">  
+  Name: <input type="text" name="username" />  
+  Password: <input type="password" name="password" />  
+  <input type="submit" value="Log in" />  
+</form>
+
+<form action="/signup" method="get">
+	<input type="submit" value="Sign up" />
+</form>
+

@@ -1,0 +1,36 @@
+<div style="text-align:center">
+	<h1 style="color:red">MOVIE</h1>
+
+	<h3>Welcome, <%= @user.username %>!</h3>
+
+	<form action="/sort_by_date" method="get" style="float:center">
+		<input type="submit" value="按时间排序" />
+	</form>
+
+	<form action="/sort_by_rate" method="get">
+		<input type="submit" value="按评分排序" />
+	</form>
+
+	<div class='films' >
+		<table style="margin: 0 auto">
+			<tr>
+				<th>Name</th>
+				<th>category</th>
+				<th>date</th>
+				<th>rate</th>			
+			</tr>
+
+			<% @films.each do |film| %>
+				<tr>
+					<td><%= film.name %></td>
+					<td><%= film.category %></td>
+					<td><%= film.date %></td>
+					<td><%= film.rate %></td>
+		 	</tr>		
+			<%end%>
+		</table>
+		<%= will_paginate @films %>
+	</div>
+
+	<a href='/logout'>Log Out</a>
+</div>
